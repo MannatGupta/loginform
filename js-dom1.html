@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document object model</title>
+</head>
+<body>
+	<form name="myform" action="hello" method="get" onsubmit="return myvalidation()">
+		Name:<br><input type="text" name="nm" placeholder="Enter your name"><br><br>
+		Password:<br><input type="password" name="pwd" placeholder="enter password">
+		<br><br>
+		Contact:<br><input field="text" name="pn" placeholder="enter number">
+
+
+<br>
+<br>
+		<input type="submit" value="Login">
+</form>
+
+<script>
+	function myvalidation()
+	{
+	var value1=document.forms["myform"]["nm"].value;
+	var value2=document.forms["myform"]["pwd"].value;
+	var value3=document.forms["myform"]["pn"].value;
+	var flag=true;
+	
+	if(value1=="")
+	{
+		alert("Name can't be empty");
+		flag= false;
+	}
+		if(value2=="")
+	{
+		alert("password can't be empty");
+		flag=false;
+	}
+
+	if(value3=="" || isNaN(value3) ||!(value3>=1&&value3<=10))
+	{
+		alert("Invalid field");
+		flag=false;
+	}
+
+return flag;
+}
+	</script>
+</body>
+</html>
