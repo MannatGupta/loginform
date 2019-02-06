@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+body
+{
+	margin:0;
+	background-color: #aaa;
+}
+body h1
+{
+	text-align:center;
+	color:black;
+	font-size:60px;
+}
+#main1
+{
+	background-color: #bbb;
+	width:470px;
+	height:330px;
+	float:left;
+	margin-top:20px;
+	margin-left:100px;
+	background-image: url("http://rajasnursingcollege.com/images/college_bus_large.jpg")
+
+
+}
+#main2
+{
+	background-color: #ccc;
+	width:250px;
+	height:340px;
+	float:left;
+	margin-left:300px;
+	margin-top:20px;
+}
+#btn1
+{
+	background-color: #bbb;
+	color:black;
+}
+#btn2
+{
+	background-color: #bbb;
+	color:black;
+}
+
+</style>
+</head>
+<body>
+	<h1>Bus Management System</h1>
+<div id="main0">
+<div id="main1">
+	
+</div>
+<div id="main2">
+	
+<form name="myform" action="hello" method="get" onsubmit="return myvalidation()">
+	<fieldset>
+    <legend><h3 >Enter details:</h3></legend>
+		University Id:<br><input type="text" name="nm" placeholder=""><br><br>
+		Password:<br><input type="password" name="pwd" placeholder="******">
+		<br><br>
+		Facility side:<br><input field="text" name="no" placeholder="1 sided/2 sided">
+		<br>
+<br>
+		Institute:
+		<select>
+  <option value="">Select</option>
+  <option value="">CBS</option>
+  <option value="">CSHS</option>
+  <option value="">CSOET</option>
+</select><br><br>
+		Session:<select>
+			<option value="">Select</option>
+  <option value="">2018</option>
+  <option value="">2017</option>
+  <option value="">2016</option>
+  <option value="">2015</option>
+</select>
+  
+
+
+
+
+<br>
+<br>
+		<input type="submit" id="btn1" value="Login">
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp	
+			<input type="submit" id="btn2" value="Register">
+	</fieldset>
+</form>
+
+<script>
+	function myvalidation()
+	{
+	var value1=document.forms["myform"]["nm"].value;
+	var value2=document.forms["myform"]["pwd"].value;
+	var value3=document.forms["myform"]["no"].value;
+	var flag=true;
+	
+	if(value1=="")
+	{
+		alert("Name can't be empty");
+		flag= false;
+	}
+		if(value2=="")
+	{
+		alert("password can't be empty");
+		flag=false;
+	}
+
+	if(value3=="" || isNaN(value3) ||!(value3>=1&&value3<=2))
+	{
+		alert("Invalid facility type");
+		flag=false;
+	}
+
+return flag;
+}
+	</script>
+
+
+	
+</div>
+</div></body>
+</html>
